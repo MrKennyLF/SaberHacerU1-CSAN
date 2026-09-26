@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Ciberseguridad | Unidad 1</title>
+    
+    <!-- Carga Tailwind directamente (Soluciona el error del ícono gigante) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: #0f172a; 
+            color: #e2e8f0; 
+        }
+        .cyber-card {
+            transition: all 0.3s ease;
+        }
+        .cyber-card:hover {
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+            border-color: #38bdf8;
+            transform: translateY(-2px);
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(51, 65, 85, 0.8);
+        }
+        /* Ajuste de scrollbar para PC */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col selection:bg-cyan-500 selection:text-white overflow-x-hidden">
+
+    <!-- ==================== VISTA DE LOGIN (Optimizado para PC y Móvil) ==================== -->
+    <div id="login-view" class="min-h-screen w-full flex items-center justify-center p-4 relative z-20">
+        
+        <!-- Elementos decorativos de fondo -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute -top-1/4 -left-1/4 w-1/2 h-1/2 bg-cyan-900/20 rounded-full blur-[120px]"></div>
+            <div class="absolute -bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-indigo-900/20 rounded-full blur-[120px]"></div>
+            <!-- Grid de fondo estilo terminal -->
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
+        </div>
+
+        <!-- Contenedor Principal Login -->
+        <div class="glass-panel w-full max-w-4xl rounded-2xl shadow-2xl shadow-cyan-900/20 relative flex flex-col md:flex-row overflow-hidden">
+            
+            <!-- Panel Lateral (Solo visible en PC) -->
+            <div class="hidden md:flex md:w-1/2 bg-slate-900/80 p-10 flex-col justify-between border-r border-slate-700/50">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-900/30 border border-cyan-700/50 text-cyan-400 text-xs font-mono mb-6">
+                        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                        SISTEMA ACTIVO
+                    </div>
+                    <h2 class="text-3xl font-bold text-white mb-4">Plataforma de <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Evaluación Segura</span></h2>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Acceso restringido al portafolio de evidencias. Todas las conexiones están cifradas de extremo a extremo garantizando la integridad de la evaluación.
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3 text-sm text-slate-500 font-mono">
+                        <svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Módulo de Hashing Activo
+                    </div>
+                    <div class="flex items-center gap-3 text-sm text-slate-500 font-mono">
+                        <svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Protección contra Fuerza Bruta
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulario de Login -->
+            <div class="w-full md:w-1/2 p-8 md:p-10 flex flex-col justify-center">
+                <div class="flex justify-center mb-6 md:hidden">
+                    <div class="p-3 bg-slate-800 rounded-xl border border-slate-700 shadow-inner">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                    </div>
+                </div>
+                
+                <h3 class="text-2xl font-bold text-white mb-2 text-center md:text-left">Autenticación</h3>
+                <p class="text-slate-400 text-sm mb-8 text-center md:text-left">Ingrese sus credenciales institucionales.</p>
+
+                <form id="login-form" class="space-y-5">
+                    <div id="error-message" class="hidden bg-red-900/50 border border-red-500/50 text-red-200 px-4 py-3 rounded-lg text-sm flex items-start gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span id="error-text">Credenciales inválidas.</span>
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Usuario / Correo</label>
+                        <input type="email" id="email" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all" placeholder="admin@sistema.seguro">
+                    </div>
+
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-slate-300 mb-2">Contraseña</label>
+                        <div class="relative">
+                            <input type="password" id="password" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all" placeholder="••••••••">
+                            <button type="button" id="toggle-password" class="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-cyan-400 transition-colors">
+                                <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                            </button>
+                        </div>
+                        
+                        <!-- Barra de fuerza -->
+                        <div class="mt-2">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-xs text-slate-500">Fuerza de la contraseña</span>
+                                <span id="strength-text" class="text-xs text-slate-500">Baja</span>
+                            </div>
+                            <div class="w-full bg-slate-800 rounded-full h-1.5">
+                                <div id="strength-bar" class="bg-red-500 h-1.5 rounded-full transition-all duration-300" style="width: 10%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full mt-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg shadow-[0_0_15px_rgba(8,145,178,0.4)] transform hover:-translate-y-0.5 transition-all flex justify-center items-center gap-2">
+                        <span>Iniciar Sesión Segura</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== VISTA DEL PORTAFOLIO ==================== -->
+    <div id="portfolio-view" class="hidden flex flex-col min-h-screen w-full relative z-10">
+        
+        <!-- Header Fijo -->
+        <header class="border-b border-slate-800 bg-slate-900/90 backdrop-blur-md sticky top-0 z-50">
+            <div class="max-w-6xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-4 w-full sm:w-auto justify-center sm:justify-start">
+                    <div class="p-2.5 bg-cyan-900/30 rounded-xl border border-cyan-700/50 shadow-inner">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <div class="text-center sm:text-left">
+                        <h1 class="text-2xl font-bold text-white tracking-tight">Portafolio de Evidencias</h1>
+                        <p class="text-sm text-cyan-500 font-mono mt-0.5">SABER HACER UNIDAD 1</p>
+                    </div>
+                </div>
+                <div class="flex-shrink-0" id="header-actions">
+                    <!-- Botón de Cerrar Sesión (Inyectado por JS) -->
+                </div>
+            </div>
+        </header>
+
+        <!-- Contenido de las Tarjetas -->
+        <main class="flex-grow max-w-6xl mx-auto w-full px-4 py-8 sm:px-6 lg:px-8">
+            <!-- Título de sección en PC -->
+            <div class="mb-8 hidden md:block">
+                <h2 class="text-3xl font-bold text-white">Documentación del Caso Práctico</h2>
+                <p class="text-slate-400 mt-2">Evidencias requeridas para la validación de protocolos de seguridad.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+                
+                <!-- Tarjeta 1: Justificación (Ocupa más espacio en PC) -->
+                <div class="cyber-card glass-panel rounded-2xl p-6 lg:p-8 lg:col-span-3 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 bg-cyan-500 text-slate-900 text-xs font-bold px-4 py-1.5 rounded-bl-xl shadow-md">Valor: 1 Punto</div>
+                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                        <div class="p-2 bg-cyan-500/10 rounded-lg text-cyan-400 group-hover:bg-cyan-500/20 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        Justificación de Herramientas
+                    </h3>
+                    <div class="space-y-4 text-slate-300 text-base leading-relaxed md:pr-12">
+                        <p>Para garantizar la confidencialidad, integridad y disponibilidad de los datos en este entorno, se han seleccionado las siguientes herramientas y estándares de protección:</p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                            <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700/50 hover:border-cyan-500/50 transition-colors">
+                                <h4 class="text-cyan-400 font-bold mb-2 text-sm">Algoritmos de Hashing</h4>
+                                <p class="text-sm text-slate-400">Implementados (Bcrypt/Argon2) para el resguardo de contraseñas. El uso de <i>salting</i> mitiga ataques de fuerza bruta.</p>
+                            </div>
+                            <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700/50 hover:border-cyan-500/50 transition-colors">
+                                <h4 class="text-cyan-400 font-bold mb-2 text-sm">Cifrado AES-256</h4>
+                                <p class="text-sm text-slate-400">Estándar de la industria para proteger datos sensibles en reposo, ofreciendo el mejor balance entre seguridad y rendimiento.</p>
+                            </div>
+                            <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700/50 hover:border-cyan-500/50 transition-colors">
+                                <h4 class="text-cyan-400 font-bold mb-2 text-sm">Gestor (.env)</h4>
+                                <p class="text-sm text-slate-400">Aísla credenciales y llaves de API, evitando su exposición accidental en repositorios de control de versiones.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2: Protocolos -->
+                <div class="cyber-card glass-panel rounded-2xl p-6 lg:p-8 lg:col-span-2 relative overflow-hidden group flex flex-col">
+                    <div class="absolute top-0 right-0 bg-indigo-500 text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl shadow-md">Valor: 2 Puntos</div>
+                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                        <div class="p-2 bg-indigo-500/10 rounded-lg text-indigo-400 group-hover:bg-indigo-500/20 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                            </svg>
+                        </div>
+                        Protocolos de Intercambio
+                    </h3>
+                    <p class="text-slate-300 mb-6">
+                        El intercambio de información se realiza mediante protocolos encriptados para prevenir ataques Man-in-the-Middle. Se validaron conexiones vía <strong class="text-indigo-400">HTTPS (TLS v1.3)</strong> y transferencias mediante <strong class="text-indigo-400">SSH (Ed25519)</strong>.
+                    </p>
+                    
+                    <div class="bg-slate-900/80 rounded-xl p-3 border border-slate-700 flex-grow flex flex-col">
+                        <div class="flex items-center justify-between mb-3 px-2">
+                            <span class="text-xs font-mono text-slate-400">Captura_Evidencia_01.png</span>
+                            <span class="flex h-2 w-2 rounded-full bg-emerald-500"></span>
+                        </div>
+                        <div class="flex-grow bg-slate-800 rounded-lg flex items-center justify-center border border-dashed border-slate-600 overflow-hidden relative group/img min-h-[200px]">
+                            <!-- RUTA DE LA IMAGEN DE PROTOCOLOS -->
+                            <img src="captura-protocolos.png" alt="Prueba de protocolos SSH/HTTPS" class="object-cover w-full h-full opacity-60 group-hover/img:opacity-100 transition-opacity duration-300">
+                            
+                            <!-- Mensaje si la imagen no carga -->
+                            <div class="absolute inset-0 flex flex-col items-center justify-center text-slate-500 -z-10">
+                                <svg class="w-10 h-10 mb-2 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                <span class="text-sm">Inserta tu imagen aquí</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3: Certificados -->
+                <div class="cyber-card glass-panel rounded-2xl p-6 lg:p-8 lg:col-span-1 relative overflow-hidden group flex flex-col">
+                    <div class="absolute top-0 right-0 bg-emerald-500 text-slate-900 text-xs font-bold px-4 py-1.5 rounded-bl-xl shadow-md">Valor: 1 Punto</div>
+                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                        <div class="p-2 bg-emerald-500/10 rounded-lg text-emerald-400 group-hover:bg-emerald-500/20 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4C10.957 6.425 10 8.082 10 10m0 0C10 11.918 10.957 13.575 12 15m0 0a5.002 5.002 0 01-9.288-1.968 5.002 5.002 0 019.288-1.968z" />
+                            </svg>
+                        </div>
+                        Certificados
+                    </h3>
+                    <p class="text-slate-300 text-sm mb-4">
+                        Implementación validada de certificado X.509 (SHA-256 con RSA) para autenticación del canal TLS.
+                    </p>
+                    
+                    <div class="bg-slate-900/80 rounded-xl p-3 border border-slate-700 flex-grow flex flex-col">
+                        <div class="flex items-center justify-between mb-3 px-2">
+                            <span class="text-xs font-mono text-slate-400">Cert_Evidencia.png</span>
+                            <span class="flex h-2 w-2 rounded-full bg-emerald-500"></span>
+                        </div>
+                        <div class="flex-grow bg-slate-800 rounded-lg flex items-center justify-center border border-dashed border-slate-600 overflow-hidden relative group/img min-h-[150px]">
+                            <!-- RUTA DE LA IMAGEN DE CERTIFICADOS -->
+                            <img src="captura-certificado.png" alt="Prueba del certificado digital" class="object-cover w-full h-full opacity-60 group-hover/img:opacity-100 transition-opacity duration-300">
+                            
+                            <div class="absolute inset-0 flex flex-col items-center justify-center text-slate-500 -z-10">
+                                <svg class="w-8 h-8 mb-2 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="border-t border-slate-800 bg-slate-900/80 mt-auto backdrop-blur-sm">
+            <div class="max-w-6xl mx-auto px-4 py-6 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                    <span class="text-slate-300 text-sm font-medium tracking-wide">Conexión Segura Establecida</span>
+                </div>
+                <div class="text-center md:text-right bg-slate-800/50 px-6 py-3 rounded-xl border border-slate-700/50">
+                    <p class="text-slate-300 text-sm font-semibold">
+                        Luis Fernando Moreno Aguilar 
+                        <span class="text-slate-500 mx-2">|</span> 
+                        <span class="text-cyan-400 font-mono">19040135</span>
+                    </p>
+                    <a href="https://github.com/MrKennyLF/SaberHacerU1-CSAN.git" class="text-slate-500 text-xs hover:text-cyan-400 transition-colors mt-1 inline-block flex items-center justify-center md:justify-end gap-1">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                        Repositorio Oficial
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+
+        // Modo Simulación Automático para evitar errores si no hay Firebase configurado
+        const firebaseConfig = { apiKey: "mock-api-key", projectId: "mock-project" };
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        const loginView = document.getElementById('login-view');
+        const portfolioView = document.getElementById('portfolio-view');
+        const loginForm = document.getElementById('login-form');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const togglePasswordBtn = document.getElementById('toggle-password');
+        const eyeIcon = document.getElementById('eye-icon');
+        const strengthBar = document.getElementById('strength-bar');
+        const strengthText = document.getElementById('strength-text');
+        const errorMessage = document.getElementById('error-message');
+        const errorText = document.getElementById('error-text');
+
+        // Toggle Contraseña
+        togglePasswordBtn.addEventListener('click', () => {
+            const isPassword = passwordInput.type === 'password';
+            passwordInput.type = isPassword ? 'text' : 'password';
+            
+            if (isPassword) {
+                eyeIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />`;
+                eyeIcon.classList.add('text-cyan-400');
+            } else {
+                eyeIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />`;
+                eyeIcon.classList.remove('text-cyan-400');
+            }
+        });
+
+        // Fuerza de contraseña visual
+        passwordInput.addEventListener('input', (e) => {
+            const val = e.target.value;
+            let strength = 0;
+            
+            if (val.length > 5) strength++;
+            if (val.length > 8) strength++;
+            if (/[A-Z]/.test(val)) strength++;
+            if (/[0-9]/.test(val)) strength++;
+            if (/[^A-Za-z0-9]/.test(val)) strength++;
+
+            if (val.length === 0) {
+                updateStrength('10%', 'bg-slate-700', 'Ninguna', 'text-slate-500');
+            } else if (strength <= 2) {
+                updateStrength('33%', 'bg-red-500', 'Baja', 'text-red-400');
+            } else if (strength <= 4) {
+                updateStrength('66%', 'bg-amber-500', 'Media', 'text-amber-400');
+            } else {
+                updateStrength('100%', 'bg-emerald-500', 'Fuerte', 'text-emerald-400');
+            }
+        });
+
+        function updateStrength(width, barColor, text, textColor) {
+            strengthBar.style.width = width;
+            strengthBar.className = `h-1.5 rounded-full transition-all duration-500 ${barColor}`;
+            strengthText.textContent = text;
+            strengthText.className = `text-xs font-medium transition-colors ${textColor}`;
+        }
+
+        let failedAttempts = 0;
+
+        // Login Simulado
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            errorMessage.classList.add('hidden');
+            
+            if (failedAttempts >= 3) {
+                errorText.textContent = "IP Bloqueada. Demasiados intentos fallidos.";
+                errorMessage.classList.remove('hidden');
+                return;
+            }
+
+            const email = emailInput.value;
+            const password = passwordInput.value;
+            const btn = loginForm.querySelector('button[type="submit"]');
+            const originalBtnText = btn.innerHTML;
+            
+            btn.innerHTML = `<svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Autenticando...`;
+            btn.disabled = true;
+
+            // Simular latencia de red
+            await new Promise(r => setTimeout(r, 1500)); 
+
+            if (email === "admin@sistema.seguro" && password === "Admin123!") {
+                showPortfolio();
+            } else {
+                failedAttempts++;
+                errorText.textContent = `Credenciales erróneas. Intentos restantes: ${3 - failedAttempts}`;
+                errorMessage.classList.remove('hidden');
+                btn.innerHTML = originalBtnText;
+                btn.disabled = false;
+            }
+        });
+
+        function showPortfolio() {
+            // Animación de salida suave
+            loginView.style.opacity = '0';
+            loginView.style.transition = 'opacity 0.5s ease';
+            
+            setTimeout(() => {
+                loginView.classList.add('hidden');
+                portfolioView.classList.remove('hidden');
+                // Forzar un reflow para la animación de entrada
+                void portfolioView.offsetWidth; 
+                
+                // Añadir botón de logout
+                const headerActions = document.getElementById('header-actions');
+                if (headerActions && !document.getElementById('logout-btn')) {
+                    const logoutBtn = document.createElement('button');
+                    logoutBtn.id = 'logout-btn';
+                    logoutBtn.className = 'w-full sm:w-auto text-sm text-slate-300 hover:text-white transition-all flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 px-5 py-2.5 rounded-lg border border-slate-700 shadow-sm';
+                    logoutBtn.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                        </svg>
+                        Cerrar Sesión
+                    `;
+                    headerActions.appendChild(logoutBtn);
+                    
+                    logoutBtn.addEventListener('click', () => {
+                        location.reload(); 
+                    });
+                }
+            }, 500);
+        }
+    </script>
+</body>
+</html>
