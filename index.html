@@ -7,6 +7,7 @@
     
     <!-- Carga Tailwind directamente (Soluciona el error del ícono gigante) -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
     
     <style>
         body {
@@ -262,8 +263,122 @@
                         </div>
                     </div>
                 </div>
+<!-- Tarjeta 4: Aplicación de la Tríada CID -->
+                <div class="cyber-card glass-panel rounded-2xl p-6 lg:p-8 lg:col-span-2 relative overflow-hidden group">
+                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                        <div class="p-2 bg-blue-500/10 rounded-lg text-blue-400 group-hover:bg-blue-500/20 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                            </svg>
+                        </div>
+                        Aplicación de la Tríada CID
+                    </h3>
+                    <p class="text-slate-300 text-sm mb-6">Auditoría interna de los pilares de seguridad implementados en este portafolio web:</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-3 bg-slate-900/50 rounded-lg border border-slate-700/50">
+                            <div class="mt-1 w-8 h-8 rounded-full bg-cyan-900/50 flex items-center justify-center text-cyan-400 shrink-0">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C9.243 2 7 4.243 7 7v3H6a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V12a2 2 0 00-2-2h-1V7c0-2.757-2.243-5-5-5zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v3H9V7zm-3 7h12v10H6V14z"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-cyan-400 font-bold text-sm">Confidencialidad</h4>
+                                <p class="text-xs text-slate-400 mt-1">El acceso al portafolio está restringido mediante autenticación, garantizando que solo el personal autorizado visualice la documentación.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-3 bg-slate-900/50 rounded-lg border border-slate-700/50">
+                            <div class="mt-1 w-8 h-8 rounded-full bg-emerald-900/50 flex items-center justify-center text-emerald-400 shrink-0">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-emerald-400 font-bold text-sm">Integridad</h4>
+                                <p class="text-xs text-slate-400 mt-1">Los datos viajan por un túnel seguro (HTTPS), asegurando que la información de las evidencias sea exacta y no modificada en tránsito.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-3 bg-slate-900/50 rounded-lg border border-slate-700/50">
+                            <div class="mt-1 w-8 h-8 rounded-full bg-amber-900/50 flex items-center justify-center text-amber-400 shrink-0">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-amber-400 font-bold text-sm">Disponibilidad</h4>
+                                <p class="text-xs text-slate-400 mt-1">Despliegue en infraestructura de alta disponibilidad (GitHub Pages), asegurando que el sistema esté accesible para evaluación en todo momento.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Tarjeta 5: Simulador de Función Hash -->
+                <div class="cyber-card glass-panel rounded-2xl p-6 lg:p-8 lg:col-span-1 relative overflow-hidden group flex flex-col">
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                        <div class="p-2 bg-purple-500/10 rounded-lg text-purple-400 group-hover:bg-purple-500/20 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                            </svg>
+                        </div>
+                        Módulo Criptográfico
+                    </h3>
+                    <p class="text-slate-300 text-xs mb-4">
+                        Evaluación interactiva del algoritmo SHA-256 para validación de integridad y generación de firmas digitales.
+                    </p>
+                    
+                    <div class="flex-grow flex flex-col gap-3">
+                        <div>
+                            <label for="hash-input" class="block text-xs font-medium text-slate-400 mb-1">Entrada de Datos (Documento Original):</label>
+                            <input type="text" id="hash-input" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-600 focus:outline-none focus:ring-1 focus:ring-purple-500" placeholder="Escribe aquí para generar un Hash...">
+                        </div>
+                        
+                        <div class="flex-grow flex flex-col justify-end mt-2">
+                            <label class="block text-xs font-medium text-slate-400 mb-1">Resumen Criptográfico (Hash SHA-256):</label>
+                            <div class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 min-h-[80px] break-all font-mono text-[10px] text-purple-400 leading-tight">
+                                <span id="hash-output" class="text-slate-600">Esperando entrada de datos...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+<!-- Tarjeta 7: Laboratorio Real de Inyección SQL -->
+                <div class="cyber-card glass-panel rounded-2xl p-6 lg:p-8 lg:col-span-2 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 bg-orange-500 text-slate-900 text-xs font-bold px-4 py-1.5 rounded-bl-xl shadow-md">Laboratorio Interactivo</div>
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                        <div class="p-2 bg-orange-500/10 rounded-lg text-orange-400 group-hover:bg-orange-500/20 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                            </svg>
+                        </div>
+                        Laboratorio: Prevención de Inyección SQL
+                    </h3>
+                    <p class="text-slate-300 text-sm mb-6">
+                        Este módulo ejecuta un motor <strong>SQLite real</strong> mediante WebAssembly. La base de datos contiene un usuario oculto. Intenta acceder usando la vulnerabilidad clásica <code class="text-orange-400 bg-orange-900/30 px-1 rounded">' OR '1'='1</code> en el campo de correo.
+                    </p>
+
+                    <div class="bg-slate-900 border border-slate-700 rounded-xl p-5">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label class="block text-xs font-medium text-slate-400 mb-1">Correo Electrónico (Payload):</label>
+                                <input type="text" id="sql-email" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-orange-500" placeholder="admin@utc.edu.mx' OR '1'='1">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-slate-400 mb-1">Contraseña:</label>
+                                <input type="password" id="sql-password" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-orange-500" placeholder="Cualquier texto...">
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <button id="btn-vulnerable" class="flex-1 bg-red-900/50 hover:bg-red-800/80 text-red-200 border border-red-700/50 py-2 rounded-lg text-sm font-bold transition-colors flex items-center justify-center gap-2">
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                                Ejecutar Código Vulnerable
+                            </button>
+                            <button id="btn-seguro" class="flex-1 bg-emerald-900/50 hover:bg-emerald-800/80 text-emerald-200 border border-emerald-700/50 py-2 rounded-lg text-sm font-bold transition-colors flex items-center justify-center gap-2">
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                Ejecutar Código Seguro (Preparado)
+                            </button>
+                        </div>
+
+                        <!-- Consola de Resultados -->
+                        <div class="mt-4 bg-black border border-slate-800 rounded-lg p-3 font-mono text-[11px] text-slate-300 min-h-[100px]" id="sql-console">
+                            > Motor SQLite (WebAssembly) inicializando...<br>
+                        </div>
+                    </div>
+                </div>
         </main>
 
         <footer class="border-t border-slate-800 bg-slate-900/80 mt-auto backdrop-blur-sm">
@@ -420,6 +535,106 @@
                 }
             }, 500);
         }
+        // Lógica del Simulador de Función Hash (SHA-256)
+        const hashInput = document.getElementById('hash-input');
+        const hashOutput = document.getElementById('hash-output');
+
+        async function generateSHA256(text) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(text);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+            return hashHex;
+        }
+
+        hashInput.addEventListener('input', async (e) => {
+            const text = e.target.value;
+            if (text.length === 0) {
+                hashOutput.textContent = 'Esperando entrada de datos...';
+                hashOutput.classList.replace('text-purple-400', 'text-slate-600');
+            } else {
+                const hash = await generateSHA256(text);
+                hashOutput.textContent = hash;
+                hashOutput.classList.replace('text-slate-600', 'text-purple-400');
+            }
+        });
+        // Lógica del Laboratorio SQL Real
+        let db;
+        const sqlConsole = document.getElementById('sql-console');
+        
+        function logSQL(msg, type = 'normal') {
+            const span = document.createElement('span');
+            if (type === 'error') span.className = 'text-red-400';
+            else if (type === 'success') span.className = 'text-emerald-400';
+            else if (type === 'warning') span.className = 'text-amber-400';
+            
+            span.innerHTML = `> ${msg}<br>`;
+            sqlConsole.appendChild(span);
+            sqlConsole.scrollTop = sqlConsole.scrollHeight;
+        }
+
+        // Inicializar WebAssembly SQLite
+        initSqlJs({ locateFile: file => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/${file}` }).then(function(SQL){
+            db = new SQL.Database();
+            // Crear tabla e insertar un usuario administrador real en la RAM
+            db.run("CREATE TABLE usuarios (id INTEGER PRIMARY KEY, email TEXT, password TEXT, rol TEXT);");
+            db.run("INSERT INTO usuarios (email, password, rol) VALUES ('admin@utc.edu.mx', 'SuperSecreto123', 'Administrador Global');");
+            logSQL("Base de datos creada. Tabla 'usuarios' lista.", "success");
+        }).catch(err => logSQL(`Error al cargar SQLite: ${err}`, "error"));
+
+        // Ataque Vulnerable (Concatenación directa)
+        document.getElementById('btn-vulnerable').addEventListener('click', () => {
+            if(!db) return logSQL("Base de datos no lista aún.", "error");
+            sqlConsole.innerHTML = '';
+            
+            const email = document.getElementById('sql-email').value;
+            const pass = document.getElementById('sql-password').value;
+            
+            // El error arquitectónico: Concatenar strings directamente
+            const query = `SELECT * FROM usuarios WHERE email = '${email}' AND password = '${pass}'`;
+            logSQL(`EJECUTANDO: <span class="text-slate-500">${query}</span>`, "warning");
+
+            try {
+                const result = db.exec(query);
+                if (result.length > 0) {
+                    logSQL(`¡ACCESO CONCEDIDO! Bienvenido, ${result[0].values[0][3]}`, "error");
+                    logSQL("Vulnerabilidad explotada: El motor evaluó la inyección como código válido.", "error");
+                } else {
+                    logSQL("Acceso denegado. Credenciales incorrectas.");
+                }
+            } catch (e) {
+                logSQL(`Error de sintaxis SQL: ${e.message}`, "error");
+            }
+        });
+
+        // Ejecución Segura (Consultas Preparadas)
+        document.getElementById('btn-seguro').addEventListener('click', () => {
+            if(!db) return logSQL("Base de datos no lista aún.", "error");
+            sqlConsole.innerHTML = '';
+            
+            const email = document.getElementById('sql-email').value;
+            const pass = document.getElementById('sql-password').value;
+            
+            logSQL(`EJECUTANDO: <span class="text-slate-500">SELECT * FROM usuarios WHERE email = ? AND password = ?</span>`);
+            
+            try {
+                // Sentencia preparada: El input se trata 100% como texto, nunca como código
+                const stmt = db.prepare("SELECT * FROM usuarios WHERE email = ? AND password = ?");
+                stmt.bind([email, pass]);
+                
+                if (stmt.step()) {
+                    const row = stmt.getAsObject();
+                    logSQL(`Acceso concedido correctamente. Bienvenido, ${row.rol}`, "success");
+                } else {
+                    logSQL("¡BLOQUEADO! Acceso denegado.", "success");
+                    logSQL("Mitigación exitosa: La consulta parametrizada neutralizó la inyección SQL.", "success");
+                }
+                stmt.free();
+            } catch (e) {
+                logSQL(`Error interno: ${e.message}`, "error");
+            }
+        });
     </script>
 </body>
 </html>
